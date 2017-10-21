@@ -1,0 +1,1 @@
+# test-word-addin-insert_image
