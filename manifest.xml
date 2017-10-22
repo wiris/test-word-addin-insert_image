@@ -6,7 +6,7 @@
 	<Version>1.0.0.0</Version>
 	<ProviderName>WIRIS</ProviderName>
 	<DefaultLocale>en-US</DefaultLocale>
-	<DisplayName DefaultValue="Aadin Insert Image" />
+	<DisplayName DefaultValue="Add-in Insert Image" />
 	<Description DefaultValue="Simple MS Word Add-In." />
 	<IconUrl DefaultValue="https://wiris.github.io/test-word-addin-insert_image/icon.png" />
 	<Hosts>

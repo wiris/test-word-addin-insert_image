@@ -9,7 +9,7 @@
                 if (Office.context.requirements.isSetSupported('WordApi', 1.1)) {
                     // Do something that is only available via the new APIs
                     $('#insert').click(function() {insertImage();});
-                }
+                    $('#getSelection').click(function() {getSelection();});}
                 else {
                     // Just letting you know that this code will not work with your version of Word.
                     $('#supportedVersion').html('This code requires Word 2016 or greater.');
@@ -30,7 +30,7 @@
                 var request = new XMLHttpRequest();
                 request.open('GET', 'formula.base64', false);
                 request.send(null);
-                document.getElementById("output").innerHTML += request.responseText;
+                document.getElementById("output").innerHTML = request.responseText;
 
                 // Queue a command to replace the selected text.
                 var image = range.insertInlinePictureFromBase64(request.responseText, Word.InsertLocation.replace);
@@ -48,6 +48,27 @@
                     console.log('Debug info: ' + JSON.stringify(error.debugInfo));
                 }
             });
+        }
+        
+        function getSelection() {
+            Word.run(function (context) {
+
+                // Create a proxy object for the document.
+                var thisDocument = context.document;
+
+                // Queue a command to get the current selection.
+                // Create a proxy range object for the selection.
+                var range = thisDocument.getSelection();
+                document.getElementById("output").innerHTML = range.getHtml();
+            
+            })
+            .catch(function (error) {
+                console.log('Error: ' + JSON.stringify(error));
+                if (error instanceof OfficeExtension.Error) {
+                    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
+                }
+            });
+            
         }
 
     })();
