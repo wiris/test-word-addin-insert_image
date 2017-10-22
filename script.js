@@ -60,8 +60,9 @@
                 // Create a proxy range object for the selection.
                 var range = thisDocument.getSelection();
                 var html = range.getHtml();
-                document.getElementById("output").innerHTML = html;;
-            
+                return context.sync().then(function () {
+                    document.getElementById("output").innerHTML = html.value;
+                });
             })
             .catch(function (error) {
                 console.log('Error: ' + JSON.stringify(error));
