@@ -8,12 +8,12 @@
 	<DefaultLocale>en-US</DefaultLocale>
 	<DisplayName DefaultValue="Aadin Insert Image" />
 	<Description DefaultValue="Simple MS Word Add-In." />
-	<IconUrl DefaultValue="https://24c9b3e8613446aaa4782522fb7476c2.codepen.website/images/icon.png" />
+	<IconUrl DefaultValue="https://wiris.github.io/test-word-addin-insert_image/icon.png" />
 	<Hosts>
 		<Host Name="Document"/>
 	</Hosts>
 	<DefaultSettings>
-		<SourceLocation DefaultValue="https://24c9b3e8613446aaa4782522fb7476c2.codepen.website/index.html" />
+		<SourceLocation DefaultValue="https://wiris.github.io/test-word-addin-insert_image/index.html" />
 	</DefaultSettings>
 	<Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
