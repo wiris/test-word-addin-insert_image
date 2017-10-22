@@ -59,7 +59,8 @@
                 // Queue a command to get the current selection.
                 // Create a proxy range object for the selection.
                 var range = thisDocument.getSelection();
-                document.getElementById("output").innerHTML = range.getHtml();
+                var html = range.getHtml();
+                document.getElementById("output").innerHTML = html;;
             
             })
             .catch(function (error) {
