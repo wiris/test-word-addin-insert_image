@@ -10,7 +10,7 @@
                     // Do something that is only available via the new APIs
                     $('#insert').click(function() {insertImage();});
                     $('#getSelection').click(function() {getSelection();});
-                    $('#getOoxml').click(function() {getOoxml();});
+                    $('#getOoxml').click(function() {getSelectionOoxml();});
                 } else {
                     // Just letting you know that this code will not work with your version of Word.
                     $('#supportedVersion').html('This code requires Word 2016 or greater.');
@@ -51,7 +51,7 @@
             });
         }
         
-        function getSelection() {
+        function getSelectionOoxml() {
             Word.run(function (context) {
 
                 // Create a proxy object for the document.
@@ -76,7 +76,7 @@
             
         }
 
-        function getSelectionOoxml() {
+        function getSelection() {
             Word.run(function (context) {
 
                 // Create a proxy object for the document.
