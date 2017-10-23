@@ -9,9 +9,9 @@
                 if (Office.context.requirements.isSetSupported('WordApi', 1.1)) {
                     // Do something that is only available via the new APIs
                     $('#insert').click(function() {insertImage();});
-                    $('#getSelection').click(function() {getSelection();});}
-                    $('#getOoxml').click(function() {getOoxml();});}
-                else {
+                    $('#getSelection').click(function() {getSelection();});
+                    $('#getOoxml').click(function() {getOoxml();});
+                } else {
                     // Just letting you know that this code will not work with your version of Word.
                     $('#supportedVersion').html('This code requires Word 2016 or greater.');
                 }
